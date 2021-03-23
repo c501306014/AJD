@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- Google icon font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- stop reading jquery from wordpress -->
+    <?php wp_deregister_script('jquery'); ?>
+    <!-- reading jquery from google -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
     <title>株式会社AJD</title>
     <?php wp_head() ?>
 </head>
@@ -27,7 +34,7 @@
         </div><!-- /logo -->
 
 
-        <nav>
+        <nav class="nav-menu">
             <!-- links -->
             <?php if (is_active_sidebar('header-widgets')) : ?>
                 <ul>
