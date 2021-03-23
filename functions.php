@@ -4,6 +4,7 @@
 function my_scripts()
 {
     wp_enqueue_style("stylesheet", get_template_directory_uri() . "/scss/stylesheet.css", array(), '1.0.0', 'all');
+    wp_enqueue_script("javascript", get_template_directory_uri() . "/js/main.js", array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
 
