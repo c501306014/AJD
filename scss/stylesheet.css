@@ -1,4 +1,120 @@
+@charset "UTF-8";
 html {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   font-size: 62.5%;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header #header-logo {
+  margin: 1.6rem auto 0 auto;
+}
+
+header .nav-menu ul li {
+  list-style: none;
+}
+
+header .nav-menu ul li div #menu-menu-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav-menu ul li div #menu-menu-1 li {
+  width: 14vw;
+  height: 6rem;
+  text-align: center;
+  background-color: #707070;
+}
+
+header .nav-menu ul li div #menu-menu-1 li :hover {
+  background-color: #595757;
+}
+
+header .nav-menu ul li div #menu-menu-1 li a {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 6rem;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .nav-menu ul li div #menu-menu-1 #menu-item-27 {
+  background-color: #3071b8;
+}
+
+header .nav-menu ul li div #menu-menu-1 #menu-item-28 {
+  background-color: #003e8e;
+}
+
+.FV {
+  height: 100vh;
+}
+
+.FV #visual {
+  position: absolute;
+  /* 背景を固定したい場合 absolute を fixed に変える */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.FV #visual .bx-wrapper {
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.FV #visual .bx-wrapper .bx-viewport .bxslider li {
+  height: 100vh;
+  background: center/cover no-repeat;
+}
+
+.FV #visual .bx-wrapper .bx-controls .bx-pager {
+  bottom: 24%;
+  width: 22%;
+}
+
+.FV #visual .bx-wrapper .bx-controls .bx-pager .bx-pager-item a {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #f3f3f3;
+}
+
+.FV #visual .bx-wrapper .bx-controls .bx-pager .bx-pager-item .active {
+  background-color: #003e8e;
+}
+
+.FV #contents {
+  position: absolute;
+  top: 32%;
+  left: 8%;
+}
+
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .sp {
+    display: block;
+  }
+  main {
+    display: none;
+  }
+  header {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=stylesheet.css.map */

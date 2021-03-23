@@ -1,3 +1,110 @@
 html {
+  box-sizing: content-box;
   font-size: 62.5%;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+
+  #header-logo {
+    margin: 1.6rem auto 0 auto;
+  }
+
+  .nav-menu {
+    ul li {
+      list-style: none;
+
+      div #menu-menu-1 {
+        display: flex;
+
+        li {
+          width: 14vw;
+          height: 6rem;
+          text-align: center;
+          background-color: #707070;
+
+          :hover {
+            background-color: #595757;
+          }
+
+          a {
+            display: block;
+            font-size: 1.6rem;
+            line-height: 6rem;
+            color: white;
+            text-decoration: none;
+            transition: 0.5s;
+          }
+        }
+
+        #menu-item-27 {
+          background-color: #3071b8;
+        }
+
+        #menu-item-28 {
+          background-color: #003e8e;
+        }
+      }
+    }
+  }
+}
+
+.FV {
+  height: 100vh;
+
+  #visual {
+    position: absolute;
+
+    /* 背景を固定したい場合 absolute を fixed に変える */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    .bx-wrapper {
+      border: 0;
+      box-shadow: none;
+
+      .bx-viewport {
+        .bxslider li {
+          height: 100vh;
+          background: center/cover no-repeat;
+        }
+      }
+
+      .bx-controls .bx-pager {
+        bottom: 24%;
+        width: 22%;
+
+        .bx-pager-item {
+          a {
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: #f3f3f3;
+          }
+
+          .active {
+            background-color: #003e8e;
+          }
+        }
+      }
+    }
+  }
+
+  #contents {
+    position: absolute;
+    top: 32%;
+    left: 8%;
+  }
+}
+
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  @import "sp";
 }
