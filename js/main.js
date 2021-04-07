@@ -1,5 +1,5 @@
-$(function () {
-    $('.bxslider').bxSlider({
+jQuery(function () {
+    jQuery('.bxslider').bxSlider({
         speed: 1000,
         pause: 4000,
         auto: true,
@@ -8,9 +8,9 @@ $(function () {
     });
 
     // 画面リサイズ時にスライド幅を再設定
-    $(window).on('resize', function () {
-        var windowWidth = $(window).width();
-        $('.bxslider li').width(windowWidth)
+    jQuery(window).on('resize', function () {
+        var windowWidth = jQuery(window).width();
+        jQuery('.bxslider li').width(windowWidth)
     });
 
     init();
@@ -23,27 +23,27 @@ $(function () {
 });
 
 const init = function () {
-    $(window).on('load', function () {
-        $('#scroll-to-top').css('display', 'none');
-        $('.hamburger-menu').css('display', 'none');
+    jQuery(window).on('load', function () {
+        jQuery('#scroll-to-top').css('display', 'none');
+        jQuery('.hamburger-menu').css('display', 'none');
     })
 
-    $(window).on("onbeforeunload", function () {
+    jQuery(window).on("onbeforeunload", function () {
         alert("unload")
     })
 }
 
 const hamburgerMenu = function () {
     let is_show = false;
-    const btn = $('.menu-btn');
-    const menu = $('.hamburger-menu');
-    const menuItem = $('.hamburger-menu a');
+    const btn = jQuery('.menu-btn');
+    const menu = jQuery('.hamburger-menu');
+    const menuItem = jQuery('.hamburger-menu a');
 
 
-    $(document).click(function (e) {
-        if (!$(e.target).closest(menu).length
-            && $(e.target)[0] != btn[0]
-            && $(e.target)[0] != $('.menu-btn .material-icons')[0]
+    jQuery(document).click(function (e) {
+        if (!jQuery(e.target).closest(menu).length
+            && jQuery(e.target)[0] != btn[0]
+            && jQuery(e.target)[0] != jQuery('.menu-btn .material-icons')[0]
             && is_show
         ) {
             menu.fadeOut();
@@ -65,11 +65,11 @@ const hamburgerMenu = function () {
         menu.css("display", 'none');
     });
 
-    $(window).on('load', function () {
+    jQuery(window).on('load', function () {
 
     })
 
-    // $(window).on('load', function () {
+    // jQuery(window).on('load', function () {
     //     menu.css('display', 'none');
     //     is_show = false;
     // })
@@ -85,22 +85,22 @@ const hamburgerMenu = function () {
 const scrollToTop = function () {
     let is_show = false;
 
-    $(window).on('scroll  resize', function () {
-        if (200 < $(this).scrollTop()) {
+    jQuery(window).on('scroll  resize', function () {
+        if (200 < jQuery(this).scrollTop()) {
             if (is_show === false) {
-                $('#scroll-to-top').hide().fadeIn();
+                jQuery('#scroll-to-top').hide().fadeIn();
                 is_show = true;
             }
         } else {
             if (is_show === true) {
-                $('#scroll-to-top').fadeOut();
+                jQuery('#scroll-to-top').fadeOut();
                 is_show = false;
             }
         }
     })
 
-    $("#scroll-to-top").click(function () {
-        $("body, html").animate({ scrollTop: 0 }, 100);
+    jQuery("#scroll-to-top").click(function () {
+        jQuery("body, html").animate({ scrollTop: 0 }, 100);
     });
 }
 
