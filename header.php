@@ -12,11 +12,14 @@
     <!-- Google icon font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- stop reading jquery from wordpress -->
-    <?php wp_deregister_script('jquery'); ?>
+
     <!-- reading jquery from google -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- Safariの電話番号検出機能を無効化 -->
+    <meta name="format-detection" content="telephone=no">
 
     <title>株式会社AJD</title>
     <?php wp_head() ?>
