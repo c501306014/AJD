@@ -1,6 +1,11 @@
+@import "reset";
+@import "colors";
+@import "mixins";
+
 html {
   box-sizing: content-box;
   font-size: 62.5%;
+  color: #030303;
 }
 
 body {
@@ -15,9 +20,12 @@ header {
   position: relative;
   z-index: 1;
   display: flex;
+  background-color: $bg-color;
 
   #header-logo {
-    margin: 1.6rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 0 2.4rem;
   }
 
   .nav-menu {
@@ -28,31 +36,22 @@ header {
         display: flex;
 
         li {
-          width: 14vw;
+          width: 16rem;
           height: 6rem;
           text-align: center;
-          background-color: #707070;
 
           :hover {
-            background-color: #595757;
+            background-color: darken($bg-color, 20%);
           }
 
           a {
             display: block;
             font-size: 1.6rem;
             line-height: 6rem;
-            color: white;
+            color: $main-color;
             text-decoration: none;
             transition: 0.5s;
           }
-        }
-
-        #menu-item-27 {
-          background-color: #3071b8;
-        }
-
-        #menu-item-28 {
-          background-color: #003e8e;
         }
       }
     }
@@ -91,11 +90,11 @@ header {
           a {
             width: 0.5rem;
             height: 0.5rem;
-            background-color: #f3f3f3;
+            background-color: $bg-color;
           }
 
           .active {
-            background-color: #003e8e;
+            background-color: $main-color;
           }
         }
       }
@@ -104,90 +103,33 @@ header {
 
   #contents {
     position: absolute;
-    top: 32%;
+    top: 40%;
     left: 8%;
   }
 }
 
-.management-policy {
-  display: grid;
-  grid-template-rows: 4vw 8vw 10rem;
-  align-items: center;
-  height: 40vw;
-  padding-left: 15.2rem;
-  background: url('../images/management-policy.png') no-repeat;
-  background-size: 100vw auto;
-
-  .base-policy {
-    width: 16.5rem;
-    height: 3.8rem;
-    margin-top: 8rem;
-    font-size: 1.6rem;
-    line-height: 3.8rem;
-    color: #fff;
+.policy {
+  h1 {
+    font-size: 4.2rem;
+    color: $main-color;
     text-align: center;
-    letter-spacing: 0.03px;
-    background: #b5b5b6 0% 0% no-repeat padding-box;
-    opacity: 1;
+    letter-spacing: 0.05em;
   }
 
-  h2 {
-    margin-top: 4rem;
-    font-size: 3.2rem;
-    font-weight: bold;
-    color: #003e8e;
+  .management-policy {
+    margin-top: 1.6rem;
+
+    @include policy('../images/management-policy.png', 60rem, auto, 8rem);
   }
 
-  p {
-    max-width: 32rem;
-    margin-top: 3.2vw;
-    font-size: 1.6rem;
-    line-height: 3.2rem;
-    letter-spacing: 0.01rem;
-  }
-}
-
-.quolity-policy {
-  display: grid;
-  grid-template-rows: 6vw 10vw 10rem;
-  align-items: center;
-  height: 40vw;
-  padding-left: 62vw;
-  background: url('../images/quolity-policy.png') no-repeat;
-  background-size: 100vw auto;
-
-  .base-policy {
-    width: 16.5rem;
-    height: 3.8rem;
-    margin-top: 12rem;
-    font-size: 1.6rem;
-    line-height: 3.8rem;
-    color: #fff;
-    text-align: center;
-    letter-spacing: 0.03px;
-    background: #b5b5b6 0% 0% no-repeat padding-box;
-    opacity: 1;
-  }
-
-  h2 {
-    margin-top: 2rem;
-    font-size: 3.2rem;
-    font-weight: bold;
-    color: #003e8e;
-  }
-
-  p {
-    max-width: 32rem;
-    margin-top: 3.2vw;
-    font-size: 1.6rem;
-    line-height: 3.2rem;
-    letter-spacing: 0.01rem;
+  .quolity-policy {
+    @include policy('../images/quolity-policy.png', 60rem, 8rem, auto);
   }
 }
 
 .works {
-  height: 60rem;
-  padding: 0 6.2rem;
+  height: 80rem;
+  padding: 0 8rem;
   background-color: #eeefef;
 
   h2 {
@@ -197,7 +139,7 @@ header {
     line-height: 7.6rem;
     color: #fff;
     text-align: center;
-    background-color: #003e8e;
+    background-color: $main-color;
   }
 
   p {
@@ -211,6 +153,8 @@ header {
     margin-top: 2.4rem;
 
     .__item {
+      width: 20%;
+
       .post-image {
         img {
           width: 100%;
@@ -232,16 +176,16 @@ header {
 
   .detail {
     display: block;
-    width: 24.8rem;
+    width: 24rem;
     height: 4.8rem;
     margin: 6.4rem auto;
     font-size: 1.2rem;
     line-height: 4.8rem;
-    color: #000;
+    color: inherit;
     text-align: center;
     text-decoration: none;
-    background-color: #fff;
-    border: 1px solid black;
+    background-color: lighten($bg-color, 20%);
+    border: 1px solid #030303;
     border-radius: 10rem;
   }
 }
@@ -257,7 +201,7 @@ header {
     width: 51rem;
     padding-top: 4.5rem;
     padding-left: 3.8rem;
-    background-color: #3071b8;
+    background-color: lighten($main-color, 10%);
 
     h2 {
       font-size: 3.2rem;
@@ -276,14 +220,13 @@ header {
   .__right {
     position: relative;
     width: 51rem;
-    background: url("../images/FV4.png") no-repeat;
+    background: url("../images/FV4.png") no-repeat center;
     background-size: cover;
 
     a {
       position: absolute;
       right: 0;
       bottom: 0;
-      z-index: 1;
       display: block;
       width: 32.6rem;
       height: 6rem;
@@ -292,7 +235,7 @@ header {
       color: #fff;
       text-align: center;
       text-decoration: none;
-      background-color: #003e8e;
+      background-color: $main-color;
     }
   }
 }
@@ -302,7 +245,7 @@ footer {
   height: 24rem;
   padding: 4.8rem 10%;
   margin-top: 12rem;
-  background-color: #eeefef;
+  background-color: $bg-color;
 
   .footer-contents {
     display: flex;
@@ -348,7 +291,7 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: 0;
     display: flex;
     // justify-content: space-between;
     width: 100%;
@@ -393,11 +336,11 @@ footer {
           }
 
           #menu-item-43 {
-            background-color: #3071b8;
+            background-color: lighten($main-color, 20%);
           }
 
           #menu-item-42 {
-            background-color: #003e8e;
+            background-color: $main-color;
           }
         }
       }
@@ -409,7 +352,7 @@ footer {
   position: fixed;
   right: 5rem;
   bottom: 8.6rem;
-  z-index: 2;
+  z-index: 0;
   width: 8rem;
   height: 8rem;
   color: #fff;
