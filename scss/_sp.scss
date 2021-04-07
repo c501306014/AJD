@@ -1,9 +1,179 @@
+
+.pc {
+  display: none;
+}
+
 .sp {
   display: block;
 }
 
-main {
-  display: none;
+header {
+  height: 6rem;
+
+  .hamburger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: none;
+    width: 50vw;
+    height: 100vh;
+    font-size: 2.4rem;
+    text-align: center;
+    background-color: $bg-color;
+    opacity: 0.9;
+
+    li {
+      list-style: none;
+    }
+
+    .menu-item {
+      margin-top: 1.6rem;
+
+      a {
+        color: $main-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .menu-btn {
+    position: fixed;
+    top: 0.6rem;
+    right: 0.6rem;
+    z-index: 10;
+    width: 5rem;
+    height: 5rem;
+    color: $bg-color;
+    text-align: center;
+    background-color: #030303;
+    border-radius: 50%;
+    opacity: 0.6;
+
+    span {
+      line-height: 5rem;
+    }
+  }
 }
 
-header { display: none !important; }
+.FV {
+  height: 50vh;
+
+  #visual {
+    .bx-wrapper {
+      .bx-viewport {
+        .bxslider li {
+          height: 50vh;
+        }
+      }
+
+      .bx-controls .bx-pager .bx-pager-item {
+        display: none;
+      }
+    }
+  }
+
+  #contents {
+    display: none;
+  }
+}
+
+.catchphraze {
+  img {
+    margin: auto;
+  }
+
+  .contents {
+    max-width: 32rem;
+    margin: 1.6rem auto 0 auto;
+    font-size: 1.6rem;
+  }
+}
+
+.policy {
+  margin-top: 6rem;
+
+  .management-policy {
+    @include policy('../images/management-policy.png', 100%, auto, auto);
+
+    height: 36rem;
+    margin-top: 1.6rem;
+  }
+
+  .quolity-policy {
+    @include policy('../images/quolity-policy.png', 100%, auto, auto);
+
+    height: 36rem;
+  }
+}
+
+.works {
+  height: auto;
+  padding: 0 0 6rem 0;
+
+  h2 {
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .article-list-container {
+    flex-wrap: wrap;
+
+    .__item {
+      width: 51%;
+      margin-top: 1.6rem;
+    }
+  }
+
+  .detail {
+    margin: 1.6rem auto 0 auto;
+  }
+}
+
+.reqruit {
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  margin: auto;
+
+  .__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 32rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  .__right {
+    position: relative;
+    width: 100%;
+    height: 32rem;
+  }
+}
+
+footer {
+  padding: 3.6rem 5%;
+  margin: auto;
+}
+
+#scroll-to-top {
+  right: 1.6rem;
+  bottom: 1.6rem;
+  width: 4rem;
+  height: 4rem;
+
+  .material-icons {
+    font-size: 2.4rem;
+  }
+}
+
+// main {
+//   display: none;
+// }
+
+// header { display: none !important; }
