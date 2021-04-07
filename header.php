@@ -23,9 +23,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <h1 class="sp">
-        スマートフォンページは現在開発中です
-    </h1>
+
     <header>
         <!-- logo -->
         <div id="header-logo">
@@ -36,7 +34,7 @@
         </div><!-- /logo -->
 
 
-        <nav class="nav-menu">
+        <nav class="nav-menu pc">
             <!-- links -->
             <?php if (is_active_sidebar('header-widgets')) : ?>
                 <ul>
@@ -45,7 +43,21 @@
             <?php else : ?>
                 <h1>not found sidebar</h1>
             <?php endif; ?>
-
-
         </nav>
+        <nav class="hamburger-menu sp">
+            <!-- links -->
+            <?php if (is_active_sidebar('header-widgets')) : ?>
+                <ul>
+                    <?php dynamic_sidebar('header-widgets'); ?>
+                </ul>
+            <?php else : ?>
+                <h1>not found sidebar</h1>
+            <?php endif; ?>
+        </nav>
+
+        <a class="menu-btn sp">
+            <span class="material-icons">
+                menu
+            </span>
+        </a>
     </header>
