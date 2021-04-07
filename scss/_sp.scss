@@ -8,6 +8,8 @@
 }
 
 header {
+  position: relative;
+  z-index: 8;
   height: 6rem;
 
   .hamburger-menu {
@@ -28,6 +30,8 @@ header {
     }
 
     .menu-item {
+      position: relative;
+      z-index: 10;
       margin-top: 1.6rem;
 
       a {
@@ -50,8 +54,13 @@ header {
     border-radius: 50%;
     opacity: 0.6;
 
-    span {
+    span,
+    & {
       line-height: 5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -87,6 +96,7 @@ header {
     max-width: 32rem;
     margin: 1.6rem auto 0 auto;
     font-size: 1.6rem;
+    text-align: left;
   }
 }
 
@@ -169,6 +179,39 @@ footer {
 
   .material-icons {
     font-size: 2.4rem;
+  }
+}
+
+.page {
+  font-size: 1.6rem;
+
+  .container {
+    padding: 0;
+
+    .wp-block-advgb-image {
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      padding: 0 0.8rem;
+    }
+
+    .wp-block-advgb-table {
+      width: 90vw;
+
+      td,
+      tr {
+        font-size: 1.2rem;
+      }
+    }
   }
 }
 

@@ -1,3 +1,4 @@
+
 @mixin policy(
   $bg-img-url,
   $contents-width,
@@ -5,6 +6,7 @@
   $contents-margin-right) {
   // policy common setting
   height: 80rem;
+  text-align: left;
   background: url($bg-img-url) no-repeat;
   background-size: cover;
 

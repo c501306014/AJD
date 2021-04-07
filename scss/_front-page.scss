@@ -1,0 +1,191 @@
+.FV {
+  height: 100vh;
+
+  #visual {
+    position: absolute;
+
+    /* 背景を固定したい場合 absolute を fixed に変える */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    .bx-wrapper {
+      border: 0;
+      box-shadow: none;
+
+      .bx-viewport {
+        .bxslider li {
+          height: 100vh;
+          background: center/cover no-repeat;
+        }
+      }
+
+      .bx-controls .bx-pager {
+        bottom: 24%;
+        width: 22%;
+
+        .bx-pager-item {
+          a {
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: $bg-color;
+          }
+
+          .active {
+            background-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+
+  #contents {
+    position: absolute;
+    top: 40%;
+    left: 8%;
+  }
+}
+
+.policy {
+  h1 {
+    font-size: 4.2rem;
+    color: $main-color;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  .management-policy {
+    margin-top: 1.6rem;
+
+    @include policy('../images/management-policy.png', 60rem, auto, 8rem);
+  }
+
+  .quolity-policy {
+    @include policy('../images/quolity-policy.png', 60rem, 8rem, auto);
+  }
+}
+
+.works {
+  height: 80rem;
+  padding: 0 8rem;
+  background-color: #eeefef;
+
+  h2 {
+    width: 37.8rem;
+    height: 7.6rem;
+    font-size: 3.6rem;
+    line-height: 7.6rem;
+    color: #fff;
+    text-align: center;
+    background-color: $main-color;
+  }
+
+  p {
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .article-list-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2.4rem;
+
+    .__item {
+      width: 20%;
+
+      .post-image {
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+          transition: 0.5s;
+
+          &:hover {
+            box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+            transition: 0.5s;
+            transform: scale(1.05, 1.05);
+          }
+        }
+      }
+
+      .post-title {
+        margin-top: 2.4rem;
+
+        h3 {
+          font-size: 1.6rem;
+          font-weight: normal;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .detail {
+    display: block;
+    width: 24rem;
+    height: 4.8rem;
+    margin: 6.4rem auto;
+    font-size: 1.2rem;
+    line-height: 4.8rem;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    background-color: lighten($bg-color, 20%);
+    border: 1px solid #030303;
+    border-radius: 10rem;
+  }
+}
+
+.reqruit {
+  display: flex;
+  width: 102rem;
+  height: 28.4rem;
+  margin: auto;
+  margin-top: -8rem;
+
+  .__left {
+    width: 51rem;
+    padding-top: 4.5rem;
+    padding-left: 3.8rem;
+    background-color: lighten($main-color, 10%);
+
+    h2 {
+      font-size: 3.2rem;
+      line-height: 4.8rem;
+      color: #fff;
+    }
+
+    p {
+      margin-top: 2.5rem;
+      font-size: 1.6rem;
+      line-height: 3.2rem;
+      color: #fff;
+    }
+  }
+
+  .__right {
+    position: relative;
+    width: 51rem;
+    background: url("../images/FV4.png") no-repeat center;
+    background-size: cover;
+
+    a {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 32.6rem;
+      height: 6rem;
+      font-size: 2.4rem;
+      line-height: 6rem;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      background-color: $main-color;
+    }
+  }
+}
