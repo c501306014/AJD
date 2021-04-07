@@ -21,7 +21,7 @@
         <div class="__left">
             <p>Copyright © AJD Co.. Ltd. All Rights Reserved.</p>
         </div>
-        <div class="__right">
+        <div class="__right pc">
 
             <!-- links -->
             <?php if (is_active_sidebar('footer-nav-widgets')) : ?>
