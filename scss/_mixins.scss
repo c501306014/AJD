@@ -1,0 +1,36 @@
+@mixin policy(
+  $bg-img-url,
+  $contents-width,
+  $contents-margin-left,
+  $contents-margin-right) {
+  // policy common setting
+  height: 80rem;
+  background: url($bg-img-url) no-repeat;
+  background-size: cover;
+
+  .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: $contents-width;
+    height: 100%;
+    margin: 0 $contents-margin-right 0 $contents-margin-left;
+    background-color: $bg-color;
+    opacity: 0.8;
+
+    h2 {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: $main-color;
+    }
+
+    p {
+      max-width: 32rem;
+      margin-top: 1.6rem;
+      font-size: 1.6rem;
+      line-height: 3.2rem;
+      letter-spacing: 0.01rem;
+    }
+  }
+}
