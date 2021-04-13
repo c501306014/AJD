@@ -1,5 +1,9 @@
 <?php
 
+// 勝手に改行機能を削除
+remove_filter('the_content', 'wpautop');
+remove_filter('the_excerpt', 'wpautop');
+
 // read stylesheet, javascript
 function my_scripts()
 {
