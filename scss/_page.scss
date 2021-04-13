@@ -105,3 +105,32 @@
     }
   }
 }
+
+.works-list {
+  .article-list-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .__item {
+      width: 30%;
+      margin-top: 8rem;
+
+      img {
+        margin: auto;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+        transition: 0.5s;
+
+        &:hover {
+          box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+          transition: 0.5s;
+          transform: scale(1.05, 1.05);
+        }
+      }
+    }
+
+    h3 {
+      margin-top: 0.5em;
+    }
+  }
+}

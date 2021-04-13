@@ -1,0 +1,68 @@
+.contact-description {
+  width: 100%;
+  padding: 1em !important;
+  margin: 3.2rem auto !important;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.my-contact-form {
+  form {
+    .red {
+      padding-left: 1em;
+      font-size: 0.8em;
+      color: darken(red, 10%);
+    }
+
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+
+      dt {
+        display: flex;
+        width: 30%;
+        padding-top: 1em;
+        padding-left: 0.5em;
+        text-align: left;
+        background-color: #e6e6e6;
+        border-top: 1px solid black;
+        // border-bottom: 1px solid black;
+      }
+
+      dd {
+        width: 70%;
+        padding: 1rem 0.5rem;
+        border-top: 1px solid black;
+        // border-bottom: 1px solid black;
+
+        input {
+          @include contact-form-input;
+        }
+
+        textarea {
+          @include contact-form-input;
+        }
+
+        select {
+          @include contact-form-input;
+        }
+      }
+
+      .form-end {
+        border-bottom: 1px solid black;
+      }
+
+      p {
+        margin: 2.4rem auto !important;
+
+        button {
+          padding: 1em 3em;
+          font-size: 2.4rem;
+          color: #fff;
+          background-color: $main-color;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

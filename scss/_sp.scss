@@ -215,6 +215,41 @@ footer {
   }
 }
 
+.contact-description {
+  width: 95%;
+}
+
+.my-contact-form {
+  form {
+    padding: 0 0.5em;
+
+    dl {
+      dt {
+        width: 100%;
+        padding: 1em 0.5em;
+      }
+
+      dd {
+        width: 100%;
+        padding: 1rem 0.5rem;
+        border-top: none;
+      }
+
+      .form-end {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.works-list {
+  .article-list-container {
+    .__item {
+      width: 100%;
+    }
+  }
+}
+
 // main {
 //   display: none;
 // }
