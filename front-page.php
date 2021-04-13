@@ -52,7 +52,7 @@
             $cat_posts = get_posts(array(
                 'post_type' => 'post',
                 'category_name' => 'works',
-                'post_per_page' => '4',
+                'posts_per_page' => '4',
                 'orderby' => 'date',
                 'order' => 'DESC'
             ));
